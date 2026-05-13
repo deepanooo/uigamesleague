@@ -60,14 +60,14 @@ export default function CompPage({ game, setPage }) {
     </div>
 
     {/* Kolom kanan - logo game */}
-    {game.id === 'ml' && (
+    {game.logo && (
       <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
         <img
-          src="src/assets/image2.png"
-          alt="Mobile Legends"
+          src={game.logo}
+          alt={game.name}
           style={{
             width: '300px',
-            maxWidth: '100%',
+            maxWidth: '90%',
             mixBlendMode: 'screen',
             filter: `drop-shadow(0 0 40px ${game.accent}cc)`,
             
@@ -79,7 +79,7 @@ export default function CompPage({ game, setPage }) {
     {game.id === 'val' && (
       <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: '48px' }}>
         <img
-          src="src/assets/image2.png"
+          src="src/assets/image 3.png"
           alt="Mobile Legends"
           style={{
             width: '300px',
