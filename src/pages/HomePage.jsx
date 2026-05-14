@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Footer from '../components/Footer';
 import CountdownBox from '../components/CountdownBox';
 import { useCountdown } from '../hooks/useCountdown';
+import AnimatedSection from '../components/AnimatedSection';
 import {
   GAMES,
   TIMELINE,
@@ -45,7 +46,7 @@ export default function HomePage({ setPage }) {
           </div>
         </div>
       </div>
-
+    <AnimatedSection direction='left' delay={150}>
       {/* Games */}
       <div className="section">
         <div className="section-header">
@@ -79,8 +80,10 @@ export default function HomePage({ setPage }) {
           ))}
         </div>
       </div>
-
+      </AnimatedSection>
+      
       {/* About */}
+      <AnimatedSection direction='right' delay={150}>
       <div className="section">
         <div className="about-box">
           <div>
@@ -108,8 +111,10 @@ export default function HomePage({ setPage }) {
           </div>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Who Can Join */}
+      <AnimatedSection direction='up' delay={150}>
       <div className="section">
         <div className="section-header">
           <div className="section-label">PESERTA</div>
@@ -127,8 +132,10 @@ export default function HomePage({ setPage }) {
           ))}
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Timeline */}
+      <AnimatedSection direction='down' delay={150}>
       <div className="section" id="timeline-section">
         <div className="section-header">
           <div className="section-label">JADWAL</div>
@@ -159,6 +166,7 @@ export default function HomePage({ setPage }) {
           </div>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Countdown */}
       <div className="section">

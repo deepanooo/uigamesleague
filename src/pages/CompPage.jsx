@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import CountdownBox from '../components/CountdownBox';
 import { useCountdown } from '../hooks/useCountdown';
 import { TEAMS, PLAYERS, TIMELINE, COUNTDOWN_TARGET } from '../data/constants';
+import AnimatedSection from '../components/AnimatedSection';
 
 export default function CompPage({ game, setPage }) {
   const [tab, setTab] = useState('overview');
@@ -181,6 +182,7 @@ export default function CompPage({ game, setPage }) {
 
         {/* Tab Content */}
         {tab === 'overview' && (
+          <AnimatedSection direction='down' delay={150}>
           <div>
             <h3
               style={{
@@ -209,9 +211,11 @@ export default function CompPage({ game, setPage }) {
               ))}
             </div>
           </div>
+          </AnimatedSection>
         )}
 
         {tab === 'bracket' && (
+          <AnimatedSection direction='down' delay={150}>
           <div>
             <h3
               style={{
@@ -277,9 +281,11 @@ export default function CompPage({ game, setPage }) {
               </div>
             </div>
           </div>
+          </AnimatedSection>
         )}
 
         {tab === 'matches' && (
+          <AnimatedSection direction='down' delay={150}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[[0, 1], [2, 3], [4, 5], [6, 7]].map(([a, b], i) => (
               <div
@@ -346,9 +352,11 @@ export default function CompPage({ game, setPage }) {
               </div>
             ))}
           </div>
+          </AnimatedSection>
         )}
 
         {tab === 'players' && (
+          <AnimatedSection direction='down' delay={150}>
           <div className="players-grid">
             {PLAYERS.map((p, i) => (
               <div key={i} className="player-card">
@@ -369,6 +377,7 @@ export default function CompPage({ game, setPage }) {
               </div>
             ))}
           </div>
+          </AnimatedSection>
         )}
       </div>
 
